@@ -1,0 +1,94 @@
+    /**
+ * Btn
+ */
+    
+    .c-main-btn {
+        margin: $sp-common-space auto 0;
+        padding: {
+            bottom: 0px;
+            left: 4px;
+        }
+        width: 24vw;
+        display: block;
+        border-radius: 100px;
+        border: solid 1px $color-accent;
+        text-align: center;
+        color: $color-accent;
+        &::after {
+            font-family: "Font Awesome 5 Free";
+            content: "\f105";
+            font-weight: 900;
+            font-size: 1.2rem;
+            position: relative;
+            top: 1px;
+            padding-left: 4px;
+            color: $color-accent;
+            transition: .2s;
+        }
+        @include pc-media-queris {
+            width: 6rem;
+            margin: $pc-common-space auto 0;
+        }
+        &:hover {
+            &::after {
+                padding-left: 8px;
+                margin-right: -4px;
+            }
+        }
+    }
+    
+    .c-down-btn {
+        display: block;
+        z-index: 10;
+        margin-left: -10px;
+        width: 40px;
+        height: 60px;
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        @include pc-media-queris {
+            display: none;
+        }
+    }
+    
+    a.c-down-btn span {
+        margin-top: 8px;
+        width: 18px;
+        height: 18px;
+        position: absolute;
+        top: 0;
+        left: 11px;
+        border: {
+            left: 2px solid #fff;
+            bottom: 2px solid #fff;
+        }
+        transform: rotate(-45deg);
+        animation: sdb 2s infinite 4s;
+        opacity: 0;
+    }
+    
+    a.c-down-btn span:nth-of-type(1) {
+        animation-delay: 0s;
+    }
+    
+    a.c-down-btn span:nth-of-type(2) {
+        top: 10px;
+        animation-delay: 0.2s;
+    }
+    
+    a.c-down-btn span:nth-of-type(3) {
+        top: 20px;
+        animation-delay: 0.4s;
+    }
+    
+    @keyframes sdb {
+        0% {
+            opacity: 0;
+        }
+        50% {
+            opacity: 1;
+        }
+        100% {
+            opacity: 0;
+        }
+    }

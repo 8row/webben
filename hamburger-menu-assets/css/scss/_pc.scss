@@ -1,0 +1,72 @@
+/* PC用表示 */
+@media screen and (min-width: $breakPoint) {
+  /* メニュー開閉ボタン simpleバージョン用
+    ------------------------------- */
+  .hamburger-menu__hamburger-button,
+  .hamburger-menu__cross-button {
+    top: $pc-display-space;
+    right: $pc-display-space;
+  }
+
+  /* メニュー simpleバージョン用
+    ------------------------------- */
+  .hamburger-menu__nav li a {
+    padding: 12px 100px;
+    width: auto;
+  }
+
+  /* メニュー extendバージョン用
+    ------------------------------- */
+  .only-extend.hamburger-menu__nav {
+    opacity: 1;
+    padding: 0;
+    width: 100vw;
+    height: auto;
+    display: block;
+    ul {
+      display: flex;
+      li {
+        flex: 1;
+        position: relative;
+        .js-white-bar {
+          position: absolute;
+          top: 1.5vh;
+          right: -1px;
+          display: inline-block;
+          height: 4vh;
+          width: 1px;
+          background-color: #fff;
+          opacity: 0.6;
+        }
+        .js-white-bar--left {
+          left: -1px;
+        }
+        + li {
+          border-top: none;
+        }
+        a {
+          padding: 0;
+          height: 7vh;
+          width: auto;
+          /* PC表示の文字サイズ */
+          font-size: 0.9rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+
+/* PCの広いスクリーンで表示した際の中央固定 */
+@media screen and (min-width: $wide-screen) {
+  /* メニュー extendバージョン用
+    ------------------------------- */
+  .only-extend.hamburger-menu__nav ul {
+    margin: auto;
+    width: $wide-screen;
+  }
+}

@@ -1,0 +1,115 @@
+    /**
+ * Layout
+ */
+    
+    .l-title {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        color: #fff;
+        background: linear-gradient(135deg, rgba(0, 0, 0, .8), rgba(0, 0, 0, .6), rgba(0, 0, 0, 1)), url(../img/sp-1.jpg);
+        background: {
+            repeat: no-repeat;
+            size: contain;
+            attachment: fixed;
+            position: top center;
+            color: $color-accent;
+        }
+        height: 30vh;
+        .l-list-page--index & {
+            height: 100vh;
+            background: {
+                size: cover;
+                attachment: scroll;
+            }
+            >h1 {
+                transform: translateY(-200%);
+                @include pc-media-queris {
+                    transform: translateY(-150%);
+                }
+            }
+            >p {
+                transform: translateY(50%);
+            }
+        }
+        @include pc-media-queris {
+            background-size: cover;
+        }
+        >h1,
+        >p {
+            position: absolute;
+            padding: 0 $sp-common-space;
+            @include pc-media-queris {
+                padding: 0 $pc-common-space;
+            }
+        }
+    }
+    
+    .l-content {
+        padding: ($sp-common-space * 4) ($sp-common-space * 2);
+        position: relative;
+        &__p+&__p {
+            margin-top: 2rem;
+        }
+    }
+    
+    @include pc-media-queris {
+        .l-title,
+        .l-content {
+            flex: 1;
+        }
+        .l-title {
+            .l-list-page & {
+                height: 100vh;
+                width: 50vw;
+                position: fixed;
+                background: {
+                    position: left;
+                }
+            }
+        }
+        .l-content {
+            padding: ($pc-common-space * 8) 0;
+            margin: auto;
+            width: $pc-width;
+            .l-list-page & {
+                width: 50vw;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                position: absolute;
+                right: 0;
+            }
+            &.l-aside-content {
+                position: relative;
+                left: -$pc-common-space;
+                padding-top: $pc-common-space * 4;
+                width: $pc-width - $pc-common-space*2;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: space-between;
+            }
+        }
+    }
+    
+    .l-post-page {
+        .attachment-thumbnail {
+            margin-top: $pc-common-space;
+            @include pc-media-queris {
+                margin-top: $pc-common-space;
+            }
+        }
+        h2 {
+            color: $color-accent;
+            font-size: 1rem;
+            border-left: solid $sp-common-space $color-accent;
+            padding: 0 0 0 ($sp-common-space / 2);
+            @include pc-media-queris {
+                padding: 0 0 0 ($pc-common-space / 2);
+                border-left: solid $pc-common-space $color-accent;
+            }
+        }
+    }

@@ -1,0 +1,72 @@
+/**
+ * List
+ */
+
+.l-list-page .l-content {
+    //relative出ずらした分
+    padding-right: $sp-common-space * 3;
+    @include pc-media-queris {
+        padding-right: 0;
+    }
+}
+
+.c-list-item {
+    margin-bottom: $sp-common-space * 4;
+    @include pc-media-queris {
+        width: 360px;
+        margin-bottom: $pc-common-space * 8;
+    }
+    &__title {
+        position: relative;
+        z-index: 10;
+        padding: ($sp-common-space / 2) $sp-common-space;
+        display: inline-block;
+        font-size: 1rem;
+        color: #fff;
+        @include pc-media-queris {
+            padding: ($pc-common-space / 2) $pc-common-space;
+        }
+        >h2 {
+            // position: relative;
+            // top: 1px;
+            display: inline;
+            font-size: 1rem;
+        }
+        &--icon {
+            // position: relative;
+            // bottom: 1px;
+            font-size: .9rem;
+        }
+        &--recommend {
+            // padding-bottom: 1px;
+            // position: relative;
+            // bottom: 4px;
+            // border-top: solid 1px #fff;
+            // position: relative;
+            // top: 1px;
+            font-size: .7rem;
+            font-weight: thin;
+            color: rgb(254, 255, 209);
+            word-break: keep-all;
+        }
+        &--code {
+            background-color: $color-code-bg;
+        }
+        &--book {
+            background-color: $color-book-bg;
+        }
+    }
+    &__content {
+        padding: $sp-common-space * 2;
+        position: relative;
+        top: -$sp-common-space;
+        left: $sp-common-space;
+        z-index: 0;
+        background-color: $color-sub-base;
+        @include pc-media-queris {
+            padding: $pc-common-space * 2;
+            top: -$pc-common-space;
+            left: $pc-common-space;
+        }
+    }
+}

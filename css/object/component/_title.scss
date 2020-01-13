@@ -1,0 +1,42 @@
+/**
+ * Title
+ */
+
+.c-title-main {
+    font-size: 1.4rem;
+    .l-post-page & {
+        @include pc-media-queris {
+            padding-top: 6vh;
+        }
+    }
+}
+
+.c-title-description {
+    font-size: 1.2rem;
+}
+
+.c-title-sub {
+    padding-left: $sp-common-space;
+    margin: ($sp-common-space * 4) 0;
+    width: 100%;
+    @include pc-media-queris {
+        padding-left: $pc-common-space * 2;
+        margin: ($pc-common-space * 4) auto;
+        width: $pc-width;
+    }
+    background: {
+        color: $color-accent;
+    }
+    >h2 {
+        padding: 0 $sp-common-space;
+        @include pc-media-queris {
+            padding: 0 $pc-common-space;
+        }
+        display: inline-block;
+        background: {
+            color: #fff;
+        }
+        font-size: 1.2rem;
+        color: $color-accent;
+    }
+}

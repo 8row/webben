@@ -1,0 +1,14 @@
+/**
+ * Vars
+ */
+
+//サイト全体で使うカラーコードの変数を指定する
+$color-sub-base: rgb(235, 235, 235); //リストの背景などに使う色
+// $color-accent: #3e494f;
+$color-accent: rgb(71, 71, 71);
+$color-book-bg: rgb(92, 66, 68); //リストのbookタイトル背景に使う
+$color-code-bg: #425b69; //リストのcodeタイトル背景に使う
+//サイトで使う共通のサイズ
+$pc-width: 768px; //PC表示でのブレークポイントとコンテンツのにで使う
+$sp-common-space: 3vw; //スマホ表示での余白
+$pc-common-space: 10px; //PC表示での余白

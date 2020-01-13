@@ -1,0 +1,17 @@
+/**
+ * Mixin
+ */
+
+@mixin pc-media-queris {
+  @media (min-width: ($pc-width)) {
+    @content;
+  }
+}
+
+@mixin pc-only {
+  display: none;
+  @include pc-media-queris {
+    display: block;
+    @content;
+  }
+}

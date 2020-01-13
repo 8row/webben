@@ -1,0 +1,37 @@
+/**
+ * Date
+ */
+
+.c-entry-date {
+    padding-left: $sp-common-space / 4;
+    position: absolute;
+    bottom: $sp-common-space;
+    right: 0;
+    border-left: solid 4px $color-accent;
+    display: inline-block;
+    font-size: .7rem;
+    line-height: 1;
+    text-align: right;
+    color: $color-accent;
+    @include pc-media-queris {
+        padding-left: $pc-common-space / 2;
+        bottom: $pc-common-space;
+    }
+    .l-list-page & {
+        right: $sp-common-space;
+        @include pc-media-queris {
+            padding-left: $pc-common-space / 2;
+            bottom: $pc-common-space;
+            right: $pc-common-space;
+        }
+    }
+}
+
+.l-post-page .c-entry-date {
+    top: -$sp-common-space * 3;
+    bottom: auto;
+    @include pc-media-queris {
+        top: 0;
+        bottom: auto;
+    }
+}

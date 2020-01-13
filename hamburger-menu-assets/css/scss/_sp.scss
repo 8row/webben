@@ -1,0 +1,84 @@
+/* メニュー開閉ボタン
+------------------------------- */
+.hamburger-menu__hamburger-button {
+  z-index: 200;
+  background: rgba(0, 0, 0, 0.5);
+}
+.hamburger-menu__cross-button {
+  z-index: 100;
+}
+.hamburger-menu__hamburger-button,
+.hamburger-menu__cross-button {
+  width: 60px;
+  height: 60px;
+  display: inline-block;
+  position: fixed;
+  top: $sp-display-space;
+  right: $sp-display-space;
+  line-height: 80px;
+  text-align: center;
+  border-radius: 50%;
+  cursor: pointer;
+  img {
+    width: 50%;
+    height: 50%;
+    transition: 0.4s;
+  }
+  &:hover {
+    img {
+      opacity: 0.6;
+    }
+  }
+}
+
+/* メニュー
+------------------------------- */
+.hamburger-menu__nav {
+  &,
+  ul {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  padding: 0 10%;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  li {
+    list-style: none;
+    + li {
+      border-top: $white-border;
+    }
+    a {
+      padding: 12px 0;
+      width: 80vw;
+      color: #fff;
+      text-decoration: none;
+      display: block;
+      transition: 0.4s;
+      &:hover {
+        opacity: 0.6;
+      }
+    }
+  }
+}
+
+/* フェードインフェードアウトtransition
+------------------------------- */
+.hamburger-menu__hamburger-button,
+.hamburger-menu__cross-button,
+.hamburger-menu__nav {
+  opacity: 0;
+  transition: 0.8s;
+  &.is-hg-active {
+    opacity: 1;
+  }
+}

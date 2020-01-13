@@ -1,0 +1,37 @@
+/* 付属のページトップボタンを使う場合の設定
+------------------------------- */
+.minimal-page-top {
+  display: none;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.5);
+  width: 60px;
+  height: 60px;
+  position: fixed;
+  bottom: $sp-display-space;
+  right: $sp-display-space;
+  line-height: 80px;
+  text-align: center;
+  border-radius: 50%;
+  img {
+    width: 50%;
+    height: 50%;
+    transition: 0.4s;
+  }
+  opacity: 0;
+  transition: 0.8s;
+  &.is-mn-active {
+    opacity: 1;
+  }
+  @media screen and (min-width: $breakPoint) {
+    &:hover {
+      img {
+        opacity: 0.6;
+      }
+    }
+  }
+
+  @media screen and (min-width: $breakPoint) {
+    bottom: $pc-display-space;
+    right: $pc-display-space;
+  }
+}
